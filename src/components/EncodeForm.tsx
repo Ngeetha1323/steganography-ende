@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -88,10 +89,10 @@ const EncodeForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl animate-fade-in">
+    <div className="w-full animate-fade-in">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <Card>
+        <div className="w-full">
+          <Card className="h-full">
             <CardContent className="p-6">
               <h3 className="text-lg font-medium mb-4">Upload Image</h3>
               <ImageDropzone 
@@ -107,8 +108,8 @@ const EncodeForm: React.FC = () => {
           </Card>
         </div>
         
-        <div>
-          <Card>
+        <div className="w-full">
+          <Card className="h-full">
             <CardContent className="p-6">
               <h3 className="text-lg font-medium mb-4">Secret Message</h3>
               

@@ -24,7 +24,9 @@ const Index = () => {
           <ModeToggle mode={mode} onModeChange={setMode} />
         </div>
 
-        {mode === 'encode' ? <EncodeForm /> : <DecodeForm />}
+        <div className="w-full max-w-6xl mx-auto">
+          {mode === 'encode' ? <EncodeForm /> : <DecodeForm />}
+        </div>
 
         <footer className="text-center mt-16 text-sm text-gray-500">
           <p>
