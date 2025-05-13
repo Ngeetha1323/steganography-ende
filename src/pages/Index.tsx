@@ -12,7 +12,7 @@ const Index = () => {
       <div className="container px-4 py-12 mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Steganography<span className="text-stegano-purple"> Web</span>
+            Hidden<span className="text-stegano-purple">Message</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A simple steganography tool to hide your secret messages inside images
