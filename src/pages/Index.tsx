@@ -1,11 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import ModeToggle from '@/components/ModeToggle';
+import EncodeForm from '@/components/EncodeForm';
+import DecodeForm from '@/components/DecodeForm';
 
 const Index = () => {
+  const [mode, setMode] = useState<'encode' | 'decode'>('encode');
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container px-4 py-12 mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Hidden<span className="text-stegano-purple">Message</span>
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            A simple steganography tool to hide your secret messages inside images
+            and decode them later.
+          </p>
+        </header>
+
+        <div className="flex flex-col items-center mb-10">
+          <ModeToggle mode={mode} onModeChange={setMode} />
+        </div>
+
+        {mode === 'encode' ? <EncodeForm /> : <DecodeForm />}
+
+        <footer className="text-center mt-16 text-sm text-gray-500">
+          <p>
+            Steganography is the practice of concealing messages within other non-secret data or a physical object.
+          </p>
+          <p className="mt-2">
+            Only PNG and JPEG formats are supported. Maximum file size: 5MB.
+          </p>
+        </footer>
       </div>
     </div>
   );
