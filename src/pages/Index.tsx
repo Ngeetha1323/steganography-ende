@@ -31,7 +31,7 @@ const Index = () => {
             Steganography is the practice of concealing messages within other non-secret data or a physical object.
           </p>
           <p className="mt-2">
-            Only PNG and JPEG formats are supported. Maximum file size: 5MB.
+            Only PNG and JPEG formats are supported. Maximum file size: 100MB.
           </p>
         </footer>
       </div>

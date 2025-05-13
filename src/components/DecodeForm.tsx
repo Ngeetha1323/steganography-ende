@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,7 +8,7 @@ import ImageDropzone from './ImageDropzone';
 import ImagePreview from './ImagePreview';
 import { decodeMessage, fileToImageData } from '@/lib/steganography';
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
 
 const DecodeForm: React.FC = () => {
   const [image, setImage] = useState<File | null>(null);

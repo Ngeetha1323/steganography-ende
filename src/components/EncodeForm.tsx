@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,7 +11,7 @@ import { encodeMessage, fileToImageData, imageDataToBlob } from '@/lib/steganogr
 import { Download } from 'lucide-react';
 
 const MAX_MESSAGE_LENGTH = 1000;
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
 
 const EncodeForm: React.FC = () => {
   const [image, setImage] = useState<File | null>(null);

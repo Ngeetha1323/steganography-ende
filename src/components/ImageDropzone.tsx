@@ -11,7 +11,7 @@ interface ImageDropzoneProps {
 
 const ImageDropzone: React.FC<ImageDropzoneProps> = ({
   onImageUpload,
-  maxSize = 5 * 1024 * 1024, // 5MB default
+  maxSize = 100 * 1024 * 1024, // 100MB default
 }) => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     if (acceptedFiles && acceptedFiles.length > 0) {
